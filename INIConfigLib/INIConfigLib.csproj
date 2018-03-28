@@ -50,10 +50,10 @@
     <Compile Include="Configuration\INIConfiguration.cs" />
     <Compile Include="Configuration\Interfaces\IOptionVisitor.cs" />
     <Compile Include="Configuration\Interfaces\ISectionVisitor.cs" />
-    <Compile Include="Configuration\Option.cs" />
+    <Compile Include="Configuration\Options\Option.cs" />
+    <Compile Include="Configuration\Options\OptionArray.cs" />
     <Compile Include="Configuration\Section.cs" />
-    <Compile Include="Format\INIFormat.cs" />
-    <Compile Include="Format\INIFormatBuilder.cs" />
+    <Compile Include="Configuration\INIConfigBuilder.cs" />
     <Compile Include="IO\INIIO.cs" />
     <Compile Include="IO\INIReader.cs" />
     <Compile Include="IO\INIWriter.cs" />

@@ -1,4 +1,5 @@
 ﻿using INIConfigLib.Configuration.Interfaces;
+using INIConfigLib.Configuration.Options;
 using INIConfigLib.IO;
 using System;
 using System.Collections.Generic;
@@ -17,16 +18,18 @@ namespace INIConfigLib.Configuration
         public string[] Comment { get; protected set; }
         public string[] Documentation { get; protected set; }
         public string Identifier { get; protected set; }
-        
+        public bool IsOptional { get; protected set; }
+
         internal List<Option> options = new List<Option>();
         public ReadOnlyCollection<Option> Options { get { return options.AsReadOnly(); } }
 
 
-        public Section(string identifier, string[] documentation = null)
+        public Section(string identifier, string[] documentation = null, bool isOptional = false)
         {
             Identifier = identifier;
             Documentation = documentation;
             Comment = null;
+            IsOptional = isOptional;
         }
 
 

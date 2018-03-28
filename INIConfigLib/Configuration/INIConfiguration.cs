@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ namespace INIConfigLib.Configuration
     /// </summary>
     public class INIConfiguration
     {
-        public List<Section> Sections { get; protected set; }
+        internal List<Section> sections = new List<Section>();
+        public ReadOnlyCollection<Section> Sections { get { return sections.AsReadOnly(); } }
+
     }
 }
